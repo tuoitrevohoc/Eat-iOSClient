@@ -10,10 +10,14 @@
 		3609278B1F173E7300358AC1 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3609278A1F173E7300358AC1 /* Restaurant.swift */; };
 		3609278E1F173FEC00358AC1 /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3609278D1F173FEC00358AC1 /* RestaurantViewController.swift */; };
 		361114D91F1752A700C4D828 /* FoodApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361114D81F1752A700C4D828 /* FoodApiClient.swift */; };
+		361114DD1F17595C00C4D828 /* MenuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361114DC1F17595C00C4D828 /* MenuItemCell.swift */; };
+		361114DF1F17686B00C4D828 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361114DE1F17686B00C4D828 /* Animation.swift */; };
+		361114E31F176F5200C4D828 /* OrderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361114E21F176F5200C4D828 /* OrderItem.swift */; };
 		364A8F3F1F174989008E0FC9 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364A8F3E1F174989008E0FC9 /* MenuItem.swift */; };
 		364A8F411F174A92008E0FC9 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364A8F401F174A92008E0FC9 /* MenuViewController.swift */; };
 		3694653D1F1677B700A17828 /* GcdUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3694653C1F1677B700A17828 /* GcdUtils.swift */; };
 		369465401F167B7600A17828 /* HttpClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3694653F1F167B7600A17828 /* HttpClientTest.swift */; };
+		36C34E1A1F177A1C00D6408B /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C34E191F177A1C00D6408B /* OrderViewController.swift */; };
 		36C827AD1F16716900A57EA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C827AC1F16716900A57EA5 /* AppDelegate.swift */; };
 		36C827B21F16716900A57EA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36C827B01F16716900A57EA5 /* Main.storyboard */; };
 		36C827B41F16716900A57EA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36C827B31F16716900A57EA5 /* Assets.xcassets */; };
@@ -44,10 +48,14 @@
 		3609278A1F173E7300358AC1 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		3609278D1F173FEC00358AC1 /* RestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
 		361114D81F1752A700C4D828 /* FoodApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodApiClient.swift; sourceTree = "<group>"; };
+		361114DC1F17595C00C4D828 /* MenuItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemCell.swift; sourceTree = "<group>"; };
+		361114DE1F17686B00C4D828 /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
+		361114E21F176F5200C4D828 /* OrderItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItem.swift; sourceTree = "<group>"; };
 		364A8F3E1F174989008E0FC9 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		364A8F401F174A92008E0FC9 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		3694653C1F1677B700A17828 /* GcdUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GcdUtils.swift; sourceTree = "<group>"; };
 		3694653F1F167B7600A17828 /* HttpClientTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientTest.swift; sourceTree = "<group>"; };
+		36C34E191F177A1C00D6408B /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		36C827A91F16716900A57EA5 /* Menu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Menu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36C827AC1F16716900A57EA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36C827B11F16716900A57EA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -102,17 +110,19 @@
 			children = (
 				3609278A1F173E7300358AC1 /* Restaurant.swift */,
 				364A8F3E1F174989008E0FC9 /* MenuItem.swift */,
+				361114E21F176F5200C4D828 /* OrderItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		3609278C1F173FCE00358AC1 /* Controller */ = {
+		3609278C1F173FCE00358AC1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				3609278D1F173FEC00358AC1 /* RestaurantViewController.swift */,
 				364A8F401F174A92008E0FC9 /* MenuViewController.swift */,
+				36C34E191F177A1C00D6408B /* OrderViewController.swift */,
 			);
-			path = Controller;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		361114D71F17528700C4D828 /* Api */ = {
@@ -121,6 +131,23 @@
 				361114D81F1752A700C4D828 /* FoodApiClient.swift */,
 			);
 			path = Api;
+			sourceTree = "<group>";
+		};
+		361114DA1F17594600C4D828 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				361114DB1F17594D00C4D828 /* TableCell */,
+				361114DE1F17686B00C4D828 /* Animation.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		361114DB1F17594D00C4D828 /* TableCell */ = {
+			isa = PBXGroup;
+			children = (
+				361114DC1F17595C00C4D828 /* MenuItemCell.swift */,
+			);
+			path = TableCell;
 			sourceTree = "<group>";
 		};
 		3694653B1F16779800A17828 /* GcdUtils */ = {
@@ -162,8 +189,9 @@
 		36C827AB1F16716900A57EA5 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
+				361114DA1F17594600C4D828 /* Views */,
 				361114D71F17528700C4D828 /* Api */,
-				3609278C1F173FCE00358AC1 /* Controller */,
+				3609278C1F173FCE00358AC1 /* Controllers */,
 				360927891F173E5100358AC1 /* Models */,
 				360927861F16E89200358AC1 /* Core */,
 				36C827AC1F16716900A57EA5 /* AppDelegate.swift */,
@@ -333,9 +361,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				361114DF1F17686B00C4D828 /* Animation.swift in Sources */,
 				361114D91F1752A700C4D828 /* FoodApiClient.swift in Sources */,
+				36C34E1A1F177A1C00D6408B /* OrderViewController.swift in Sources */,
 				364A8F3F1F174989008E0FC9 /* MenuItem.swift in Sources */,
 				36C827DC1F16719700A57EA5 /* HttpClient.swift in Sources */,
+				361114E31F176F5200C4D828 /* OrderItem.swift in Sources */,
+				361114DD1F17595C00C4D828 /* MenuItemCell.swift in Sources */,
 				3609278E1F173FEC00358AC1 /* RestaurantViewController.swift in Sources */,
 				3694653D1F1677B700A17828 /* GcdUtils.swift in Sources */,
 				36C827AD1F16716900A57EA5 /* AppDelegate.swift in Sources */,

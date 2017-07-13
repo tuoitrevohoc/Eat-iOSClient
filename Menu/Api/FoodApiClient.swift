@@ -10,14 +10,14 @@ import Foundation
 
 
 struct FoodApiClient {
-    let client = HttpClient(base: "")
     
+    let client = HttpClient(base: "")
     
     /// Order foods
     ///
     /// - Parameter items: list of items to order
     func order(items: [MenuItem]) -> NetworkPromise {
-        return client.post("/order", body: items)
+        return client.post("/api/order", body: items)
     }
     
     /// Check if the order is ready
@@ -25,6 +25,6 @@ struct FoodApiClient {
     /// - Parameter id: id of the order
     /// - Returns: true or false
     func checkOrder(id: String) -> NetworkPromise {
-        return client.get("/checkOrder/\(id)")
+        return client.get("/api/order/\(id)")
     }
 }

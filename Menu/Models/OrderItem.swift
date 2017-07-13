@@ -1,5 +1,5 @@
 //
-//  MenuItem.swift
+//  OrderItem.swift
 //  Menu
 //
 //  Created by Tran Thien Khiem on 13/7/17.
@@ -8,11 +8,9 @@
 
 import Foundation
 
-/// menu item in a restaurant
-struct MenuItem: Decodable {
+/// item to order
+struct OrderItem: Codable {
     var name: String
     var price: Float
-    var photo: String
-    var information: String
     var count: Int
 }
