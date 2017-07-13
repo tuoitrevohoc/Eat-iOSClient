@@ -37,6 +37,23 @@ class MenuViewController: UIViewController {
         
         viewCartButton.setTitle("View Cart $\(price)", for: .normal)
     }
+    
+    
+    /// Setting orders for queue
+    ///
+    /// - Parameters:
+    ///   - segue: the segue
+    ///   - sender: event sender
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowCart" {
+            if let orderViewController = segue.destination as? OrderViewController {
+                orderViewController.orders = menuItems.filter({$0.count > 0})
+                    .map({item in
+                        return OrderItem(name: item.name, price: item.price, count: item.count)
+                    })
+            }
+        }
+    }
 }
 
 extension MenuViewController: UITableViewDelegate, UITableViewDataSource {

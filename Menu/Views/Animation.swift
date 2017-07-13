@@ -19,5 +19,15 @@ extension UIView {
                               animations: animation,
                               completion: nil)
     }
+    
+    static func animate(animation: @escaping () -> (), completion: @escaping (Bool) -> ())  {
+        return UIView.animate(withDuration: 0.5,
+                              delay: 0.0,
+                              usingSpringWithDamping: 0.5,
+                              initialSpringVelocity: 1.0,
+                              options: .curveEaseIn,
+                              animations: animation,
+                              completion: completion)
+    }
 }
 
