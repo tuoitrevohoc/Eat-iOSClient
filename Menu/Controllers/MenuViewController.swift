@@ -12,9 +12,9 @@ class MenuViewController: UIViewController {
     
     /// the list of restaurant
     var menuItems = [
-        MenuItem(name: "Chicken Rice", price: 9.90, photo: "", information: "", count: 0),
-        MenuItem(name: "Rice Chicken", price: 10.5, photo: "", information: "", count: 0),
-        MenuItem(name: "Tomato", price: 5.0, photo: "", information: "", count: 0)
+        MenuItem(name: "Chicken Rice", price: 9.90, photo: "", information: "Chicken, cut into 2 piece", count: 0),
+        MenuItem(name: "Rice Chicken", price: 10.5, photo: "", information: "Rice was killed by chicks", count: 0),
+        MenuItem(name: "Tomato", price: 5.0, photo: "", information: "tobacco is what i meant", count: 0)
     ]
     
     @IBOutlet weak var bottomLayout: NSLayoutConstraint!
