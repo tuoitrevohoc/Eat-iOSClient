@@ -15,8 +15,11 @@ struct Restaurant: Decodable {
     var name: String
     
     /// distance
-    var distance: Int
+    var distance: Int? = 200
     
     /// photo
     var photo: String
+    
+    // id of the restaurant
+    var id: String
 }

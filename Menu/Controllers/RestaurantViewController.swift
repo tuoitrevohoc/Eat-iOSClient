@@ -10,12 +10,26 @@ import UIKit
 
 class RestaurantViewController: UITableViewController {
     
+    /// food api client
+    var api = FoodApiClient()
+    
     /// the list of restaurant
-    var restaurants = [
-        Restaurant(name: "Food Republic", distance: 250, photo: ""),
-        Restaurant(name: "Food Republic", distance: 250, photo: ""),
-        Restaurant(name: "Food Republic", distance: 250, photo: "")
+    var restaurants: [Restaurant] = [
     ]
+    
+    /// view already load
+    override func viewDidLoad() {
+        api.getRestaurants().then(success: restaurantLoaded)
+    }
+    
+    
+    /// set restaurants when loaded
+    ///
+    /// - Parameter restaurant: restaurant
+    func restaurantLoaded(restaurants: [Restaurant]) {
+        self.restaurants = restaurants
+        tableView.reloadData()
+    }
     
     // return number of rows
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -23,7 +37,9 @@ class RestaurantViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return tableView.dequeueReusableCell(withIdentifier: "RestaurantCell")!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RestaurantCell") as! RestaurantCell
+        cell.restaurant = restaurants[indexPath.row]
+        return cell
     }
 
 }

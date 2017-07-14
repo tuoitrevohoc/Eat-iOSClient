@@ -28,6 +28,7 @@
 		36C827DE1F16727B00A57EA5 /* NetworkPromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C827DD1F16727B00A57EA5 /* NetworkPromise.swift */; };
 		36F951C41F17B2BA0067FDE4 /* CreditCardInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F951C31F17B2BA0067FDE4 /* CreditCardInfo.swift */; };
 		36F951C61F17BE460067FDE4 /* CreditCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F951C51F17BE460067FDE4 /* CreditCardViewController.swift */; };
+		36F951C81F1878700067FDE4 /* RestaurantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F951C71F1878700067FDE4 /* RestaurantCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		36C827DD1F16727B00A57EA5 /* NetworkPromise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkPromise.swift; sourceTree = "<group>"; };
 		36F951C31F17B2BA0067FDE4 /* CreditCardInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardInfo.swift; sourceTree = "<group>"; };
 		36F951C51F17BE460067FDE4 /* CreditCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardViewController.swift; sourceTree = "<group>"; };
+		36F951C71F1878700067FDE4 /* RestaurantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 			children = (
 				361114DC1F17595C00C4D828 /* MenuItemCell.swift */,
 				36C34E1B1F177DD300D6408B /* OrderItemCell.swift */,
+				36F951C71F1878700067FDE4 /* RestaurantCell.swift */,
 			);
 			path = TableCell;
 			sourceTree = "<group>";
@@ -381,6 +384,7 @@
 				3609278E1F173FEC00358AC1 /* RestaurantViewController.swift in Sources */,
 				3694653D1F1677B700A17828 /* GcdUtils.swift in Sources */,
 				36F951C41F17B2BA0067FDE4 /* CreditCardInfo.swift in Sources */,
+				36F951C81F1878700067FDE4 /* RestaurantCell.swift in Sources */,
 				36C827AD1F16716900A57EA5 /* AppDelegate.swift in Sources */,
 				36C827DE1F16727B00A57EA5 /* NetworkPromise.swift in Sources */,
 				36F951C61F17BE460067FDE4 /* CreditCardViewController.swift in Sources */,
