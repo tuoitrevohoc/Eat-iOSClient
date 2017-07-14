@@ -17,8 +17,9 @@ class QueueViewController: UIViewController {
     var orderId: String?
     @IBOutlet weak var queueNumberLabel: UIView!
     
-    @IBOutlet weak var confirmedLabel: UIView!
-    @IBOutlet weak var foodReadyLabel: UIView!
+    @IBOutlet weak var foodStatusView: UIView!
+    @IBOutlet weak var confirmedView: UIView!
+    @IBOutlet weak var foodReadyView: UIView!
     @IBOutlet weak var closeButton: UIButton!
     
     let api = FoodApiClient()
@@ -40,8 +41,37 @@ class QueueViewController: UIViewController {
     func orderCompleted(id: String)  {
         orderId = id
         
-        confirmedLabel.pullIn()
-        
+        confirmedView.pullIn()
+        checkOrderStatus()
         // start checking order status
     }
+    
+    
+    /// Check the order status
+    func checkOrderStatus() {
+        api.checkOrder(id: orderId!)
+            .then(success: onStatusUpdate)
+    }
+    
+    /// status update got from server
+    func onStatusUpdate(isReady: Bool) {
+        if isReady {
+            foodReadyView.pullIn()
+            closeButton.pullIn()
+            
+            UIView.animate {
+                self.view.backgroundColor = UIColor.green
+            }
+            
+        } else {
+            if foodStatusView.isHidden {
+                foodStatusView.pullIn()
+            }
+            
+            /// try again in 5 minutes
+            DispatchQueue.main.asyncAfter(deadline: .now() + 5.0, execute: checkOrderStatus)
+            
+        }
+    }
+    
 }

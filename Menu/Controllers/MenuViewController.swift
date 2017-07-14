@@ -31,6 +31,7 @@ class MenuViewController: UIViewController {
         updateState()
         
         if let restaurant = restaurant {
+            title = restaurant.name
             nameLabel?.text = restaurant.name
             informationLabel?.text = restaurant.information
             photoImageView?.load(photo: restaurant.photo)

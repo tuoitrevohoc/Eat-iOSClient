@@ -32,6 +32,13 @@ class RestaurantViewController: UITableViewController {
     }
     
     
+    /// Done with the order
+    ///
+    /// - Parameter segue: <#segue description#>
+    @IBAction func done(segue: UIStoryboardSegue) {
+        
+    }
+    
     /// Prepare for segue- pass restaurant to menu controller
     ///
     /// - Parameters:
