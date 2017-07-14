@@ -14,5 +14,5 @@ struct MenuItem: Decodable {
     var price: Float
     var photo: String
     var information: String
-    var count: Int
+    var count: Int! = 0
 }

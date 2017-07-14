@@ -31,8 +31,8 @@ struct FoodApiClient {
     /// Order foods
     ///
     /// - Parameter items: list of items to order
-    func order(items: [MenuItem]) -> NetworkPromise {
-        return client.post("/api/orders", body: items)
+    func order(items: [OrderItem]) -> NetworkPromise {
+        return client.put("/api/orders", body: items)
     }
     
     /// Check if the order is ready
@@ -50,11 +50,19 @@ struct FoodApiClient {
     func getRestaurants() -> NetworkPromise {
         return client.get("/api/restaurants")
     }
+    
+    
+    /// get menu of the restaurant
+    ///
+    /// - Parameter restaurantId: the restaurant id
+    /// - Returns: list of menu items
+    func getMenu(restaurantId: String) -> NetworkPromise {
+        return client.get("/api/restaurants/\(restaurantId)/menu")
+    }
 }
 
 // loading image from url
 extension UIImageView {
-    
     
     /// Load image from a remote url
     ///

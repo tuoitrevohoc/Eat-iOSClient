@@ -17,6 +17,7 @@
 		364A8F411F174A92008E0FC9 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364A8F401F174A92008E0FC9 /* MenuViewController.swift */; };
 		3694653D1F1677B700A17828 /* GcdUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3694653C1F1677B700A17828 /* GcdUtils.swift */; };
 		369465401F167B7600A17828 /* HttpClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3694653F1F167B7600A17828 /* HttpClientTest.swift */; };
+		36B959671F1887A700D94791 /* QueueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B959661F1887A700D94791 /* QueueViewController.swift */; };
 		36C34E1A1F177A1C00D6408B /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C34E191F177A1C00D6408B /* OrderViewController.swift */; };
 		36C34E1C1F177DD300D6408B /* OrderItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C34E1B1F177DD300D6408B /* OrderItemCell.swift */; };
 		36C827AD1F16716900A57EA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C827AC1F16716900A57EA5 /* AppDelegate.swift */; };
@@ -59,6 +60,7 @@
 		364A8F401F174A92008E0FC9 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		3694653C1F1677B700A17828 /* GcdUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GcdUtils.swift; sourceTree = "<group>"; };
 		3694653F1F167B7600A17828 /* HttpClientTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientTest.swift; sourceTree = "<group>"; };
+		36B959661F1887A700D94791 /* QueueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueViewController.swift; sourceTree = "<group>"; };
 		36C34E191F177A1C00D6408B /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		36C34E1B1F177DD300D6408B /* OrderItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItemCell.swift; sourceTree = "<group>"; };
 		36C827A91F16716900A57EA5 /* Menu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Menu.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,6 +133,7 @@
 				364A8F401F174A92008E0FC9 /* MenuViewController.swift */,
 				36C34E191F177A1C00D6408B /* OrderViewController.swift */,
 				36F951C51F17BE460067FDE4 /* CreditCardViewController.swift */,
+				36B959661F1887A700D94791 /* QueueViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -381,6 +384,7 @@
 				361114E31F176F5200C4D828 /* OrderItem.swift in Sources */,
 				361114DD1F17595C00C4D828 /* MenuItemCell.swift in Sources */,
 				36C34E1C1F177DD300D6408B /* OrderItemCell.swift in Sources */,
+				36B959671F1887A700D94791 /* QueueViewController.swift in Sources */,
 				3609278E1F173FEC00358AC1 /* RestaurantViewController.swift in Sources */,
 				3694653D1F1677B700A17828 /* GcdUtils.swift in Sources */,
 				36F951C41F17B2BA0067FDE4 /* CreditCardInfo.swift in Sources */,

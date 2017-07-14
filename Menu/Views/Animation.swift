@@ -29,5 +29,18 @@ extension UIView {
                               animations: animation,
                               completion: completion)
     }
+    
+    /// pull in the view
+    func pullIn() {
+        transform = CGAffineTransform(translationX: 0.0, y: 100)
+        alpha = 0.1
+        isHidden = false
+        
+        UIView.animate {
+            self.transform = CGAffineTransform.identity
+            self.alpha = 1.0
+        }
+    }
 }
+
 

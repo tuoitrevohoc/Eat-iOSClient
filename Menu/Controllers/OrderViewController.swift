@@ -127,6 +127,19 @@ extension OrderViewController: UITableViewDataSource, UITableViewDelegate {
         return result
     }
     
+    /// Pass the order items to the next view controller
+    ///
+    /// - Parameters:
+    ///   - segue: <#segue description#>
+    ///   - sender: <#sender description#>
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowQueue" {
+            if let controller = segue.destination as? QueueViewController {
+                controller.orderItems = orders
+            }
+        }
+    }
+    
     
     /// Check if a row is editable
     ///

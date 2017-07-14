@@ -54,6 +54,33 @@ class NetworkPromise {
 
 /// extension for network
 extension NetworkPromise {
+    
+    
+    /// then success and return string
+    ///
+    /// - Parameter successHandler: success handler
+    func then(success successHandler: @escaping (Bool) -> ()) {
+        
+        then(success: {
+            (data: Data) in
+            let string = String(data: data, encoding: .utf8)!
+            successHandler(string.lowercased() == "true")
+        })
+    }
+    
+    /// then success and return string
+    ///
+    /// - Parameter successHandler: <#successHandler description#>
+    func then(success successHandler: @escaping (String) -> ()) {
+        
+        then(success: {
+            (data: Data) in
+            let string = String(data: data, encoding: .utf8)!
+            successHandler(string)
+        })
+    }
+    
+    
     func then<DataType>(success successHandler: @escaping (DataType) -> Void)
         where DataType: Decodable {
             then(success: {

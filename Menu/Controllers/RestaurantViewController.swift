@@ -51,6 +51,7 @@ class RestaurantViewController: UITableViewController {
         return restaurants.count
     }
     
+    /// add
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RestaurantCell") as! RestaurantCell
         cell.restaurant = restaurants[indexPath.row]

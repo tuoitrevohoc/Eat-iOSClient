@@ -25,8 +25,10 @@ class MenuItemCell: UITableViewCell {
             nameLabel.text = item.name
             informationLabel.text = item.information
             priceButton.setTitle("$\(item.price)", for: .normal)
-            countLabel.text = "\(item.count)"
+            countLabel.text = "\(item.count!)"
             countView.isHidden = item.count == 0
+            
+            photoView.load(photo: item.photo)
         }
     }
     

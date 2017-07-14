@@ -53,7 +53,7 @@ class CreditCardViewController: UIViewController {
         if identifier == "ConfirmCreditCard" {
             
             if nameInput.text?.count == 0
-                || cardNumberInput.text?.count != 12
+                || cardNumberInput.text?.count ?? 0 < 16
                 || expirationInput.text?.count == 0
                 || ccvInput.text?.count != 3 {
                 
@@ -69,8 +69,43 @@ class CreditCardViewController: UIViewController {
         return result
     }
     
+    
+    /// scan the card
+    ///
+    /// - Parameter sender: sender
+    @IBAction func scanTheCard(_ sender: Any) {
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.allowsEditing = false
+        picker.sourceType = .camera
+        
+        picker.modalPresentationStyle = .fullScreen
+        self.present(picker, animated: false, completion: nil)
+        
+    }
 }
 
+extension CreditCardViewController: UIImagePickerControllerDelegate,
+UINavigationControllerDelegate {
+    
+    /// Image picked
+    ///
+    /// - Parameters:
+    ///   - picker: <#picker description#>
+    ///   - info: <#info description#>
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        nameInput.text = "TRAN THIEN KHIEM"
+        cardNumberInput.text = "1234 5678 9012 3456"
+        expirationInput.text = "9/2022"
+    }
+    
+    /// cancel picker
+    ///
+    /// - Parameter picker: <#picker description#>
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        self.dismiss(animated: true, completion: nil)
+    }
+}
 
 // MARK: - credit card text field delegate
 extension CreditCardViewController: UITextFieldDelegate {

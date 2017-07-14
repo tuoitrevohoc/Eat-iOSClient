@@ -11,10 +11,7 @@ import UIKit
 class MenuViewController: UIViewController {
     
     /// the list of restaurant
-    var menuItems = [
-        MenuItem(name: "Chicken Rice", price: 9.90, photo: "", information: "Chicken, cut into 2 piece", count: 0),
-        MenuItem(name: "Rice Chicken", price: 10.5, photo: "", information: "Rice was killed by chicks", count: 0),
-        MenuItem(name: "Tomato", price: 5.0, photo: "", information: "tobacco is what i meant", count: 0)
+    var menuItems: [MenuItem] = [
     ]
     
     @IBOutlet weak var photoImageView: UIImageView!
@@ -27,6 +24,8 @@ class MenuViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var viewCartButton: UIButton!
     
+    let api = FoodApiClient()
+    
     // view did load
     override func viewDidLoad() {
         updateState()
@@ -35,7 +34,26 @@ class MenuViewController: UIViewController {
             nameLabel?.text = restaurant.name
             informationLabel?.text = restaurant.information
             photoImageView?.load(photo: restaurant.photo)
+            
+            api.getMenu(restaurantId: restaurant.id)
+                .then(success: menuLoaded)
+            
         }
+    }
+    
+    
+    /// set menu when the data is loaded
+    ///
+    /// - Parameter menuItems: <#menuItems description#>
+    func menuLoaded(menuItems: [MenuItem]) {
+        self.menuItems = menuItems.map({
+            item in
+            var newItem = item
+            newItem.count = 0
+            return newItem
+        })
+        
+        tableView.reloadData()
     }
     
     // update animation
