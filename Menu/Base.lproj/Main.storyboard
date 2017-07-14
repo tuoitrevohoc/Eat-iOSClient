@@ -59,7 +59,7 @@
                                     <outlet property="distanceLabel" destination="Diq-7r-48s" id="byp-Ih-Pss"/>
                                     <outlet property="nameLabel" destination="M3E-mz-v7a" id="pDZ-Yq-5Le"/>
                                     <outlet property="photoImageView" destination="LO2-Sa-Pfd" id="dgb-i2-2NE"/>
-                                    <segue destination="Cir-cr-ERl" kind="show" id="vF1-1I-358"/>
+                                    <segue destination="Cir-cr-ERl" kind="show" identifier="ShowRestaurant" id="vF1-1I-358"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -116,8 +116,14 @@
                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QR9-Sw-tjA">
-                                            <rect key="frame" x="138" y="115" width="99.5" height="31.5"/>
-                                            <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="26"/>
+                                            <rect key="frame" x="127" y="112" width="122" height="38.5"/>
+                                            <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="32"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KKn-W6-Aw9">
+                                            <rect key="frame" x="8" y="236" width="359" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="14"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -126,10 +132,13 @@
                                     <constraints>
                                         <constraint firstItem="fbW-zK-uxs" firstAttribute="top" secondItem="vKe-88-1UX" secondAttribute="top" id="09z-kx-ttY"/>
                                         <constraint firstItem="fbW-zK-uxs" firstAttribute="leading" secondItem="vKe-88-1UX" secondAttribute="leading" id="1cB-3R-hDc"/>
+                                        <constraint firstAttribute="bottom" secondItem="KKn-W6-Aw9" secondAttribute="bottom" constant="8" id="Bsh-Yx-liw"/>
                                         <constraint firstItem="QR9-Sw-tjA" firstAttribute="centerY" secondItem="vKe-88-1UX" secondAttribute="centerY" id="FJI-DF-apH"/>
                                         <constraint firstAttribute="bottom" secondItem="fbW-zK-uxs" secondAttribute="bottom" id="GeR-fB-qZs"/>
+                                        <constraint firstAttribute="trailing" secondItem="KKn-W6-Aw9" secondAttribute="trailing" constant="8" id="O3l-IQ-toQ"/>
                                         <constraint firstItem="QR9-Sw-tjA" firstAttribute="centerX" secondItem="vKe-88-1UX" secondAttribute="centerX" id="ihe-FG-7aL"/>
                                         <constraint firstAttribute="trailing" secondItem="fbW-zK-uxs" secondAttribute="trailing" id="tXR-Uu-19b"/>
+                                        <constraint firstItem="KKn-W6-Aw9" firstAttribute="leading" secondItem="vKe-88-1UX" secondAttribute="leading" constant="8" id="wl9-bV-QCA"/>
                                     </constraints>
                                 </view>
                                 <prototypes>
@@ -259,6 +268,9 @@
                     <navigationItem key="navigationItem" title="Food Republic" id="UNd-Yp-yJ3"/>
                     <connections>
                         <outlet property="bottomLayout" destination="94w-xu-kQ3" id="pNa-hn-YaA"/>
+                        <outlet property="informationLabel" destination="KKn-W6-Aw9" id="vsx-2q-Uqy"/>
+                        <outlet property="nameLabel" destination="QR9-Sw-tjA" id="j8i-JC-zKD"/>
+                        <outlet property="photoImageView" destination="fbW-zK-uxs" id="6rD-Tl-p4W"/>
                         <outlet property="tableView" destination="2qq-Zf-gP5" id="6Wy-wx-YIa"/>
                         <outlet property="viewCartButton" destination="UZa-vl-MmW" id="XpJ-KA-C84"/>
                     </connections>

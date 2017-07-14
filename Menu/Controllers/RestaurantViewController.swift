@@ -31,6 +31,21 @@ class RestaurantViewController: UITableViewController {
         tableView.reloadData()
     }
     
+    
+    /// Prepare for segue- pass restaurant to menu controller
+    ///
+    /// - Parameters:
+    ///   - segue: the segue
+    ///   - sender: sender, supposed to be the table cell
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowRestaurant" {
+            if let cell = sender as? RestaurantCell,
+                let controller = segue.destination as? MenuViewController {
+                controller.restaurant = cell.restaurant
+            }
+        }
+    }
+    
     // return number of rows
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return restaurants.count

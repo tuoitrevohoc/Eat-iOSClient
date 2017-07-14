@@ -20,6 +20,9 @@ struct Restaurant: Decodable {
     /// photo
     var photo: String
     
+    /// the information
+    var information: String
+    
     // id of the restaurant
     var id: String
 }

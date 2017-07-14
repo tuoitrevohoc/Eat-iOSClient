@@ -17,6 +17,12 @@ class MenuViewController: UIViewController {
         MenuItem(name: "Tomato", price: 5.0, photo: "", information: "tobacco is what i meant", count: 0)
     ]
     
+    @IBOutlet weak var photoImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var informationLabel: UILabel!
+    
+    var restaurant: Restaurant?
+    
     @IBOutlet weak var bottomLayout: NSLayoutConstraint!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var viewCartButton: UIButton!
@@ -24,6 +30,12 @@ class MenuViewController: UIViewController {
     // view did load
     override func viewDidLoad() {
         updateState()
+        
+        if let restaurant = restaurant {
+            nameLabel?.text = restaurant.name
+            informationLabel?.text = restaurant.information
+            photoImageView?.load(photo: restaurant.photo)
+        }
     }
     
     // update animation
